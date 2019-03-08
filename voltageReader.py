@@ -1,10 +1,14 @@
 import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
 
+temp = 0
+
 def input_callback1(channel):
     print("1")
+    temp = 1
     
 def input_callback0(channel):
     print("0")
+    temp = 0
     
 GPIO.setwarnings(False) # Ignore warning for now
 GPIO.setmode(GPIO.BOARD) # Use physical pin numbering
